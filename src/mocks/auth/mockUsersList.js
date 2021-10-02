@@ -11,7 +11,7 @@ export const mockUserList = [
   {
     id: 3,
     username: "guest",
-    password: "demo",
+    password: "demo2",
     auth: {
       accessToken: "access-token-d2dff7b82f784de584b60964abbe45b9",
       refreshToken: "access-token-c999ccfe74aa40d0aa1a64c5e620c1a5",
