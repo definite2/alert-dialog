@@ -21,14 +21,14 @@ const Login = () => {
       [id]: value,
     });
   };
-  const onSubmit = (values) => {
+  const onSubmit = () => {
     setTimeout(() => {
       login(values.username, values.password)
         .then(({ data }) => {
-          console.log(data)
+          // console.log(data)
         })
         .catch(() => {
-          console.log("error");
+          // console.log("error");
         });
     }, 1000);
   };
