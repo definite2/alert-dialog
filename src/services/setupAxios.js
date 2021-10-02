@@ -1,16 +1,16 @@
+import { errorActions } from "../store/error/actions";
 export default function setupAxios(axios, store) {
-  axios.interceptors.request.use(
-    (config) => {
-      const {
-        auth: { accessToken },
-      } = store.getState();
-
-      if (accessToken) {
-        config.headers.Authorization = `Bearer ${accessToken}`;
-      }
-
-      return config;
+  axios.interceptors.response.use(
+    (response) => {
+      return response;
     },
-    (err) => Promise.reject(err)
+    (err) => {
+      // const status=err.status;
+      const message = err.response.data.message || err.statusText;
+      store.dispatch(
+        errorActions.showError({ title: "Error", message: message })
+      );
+      return Promise.reject(err);
+    }
   );
 }
