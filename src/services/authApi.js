@@ -1,5 +1,6 @@
 import axios from "axios";
 
+//real API calls
 const API_URL = process.env.REACT_APP_API_URL || "api";
 export const GET_USER_BY_ACCESSTOKEN_URL = `${API_URL}/auth/get-user`;
 export const LOGIN_URL = `${API_URL}/auth/login`;

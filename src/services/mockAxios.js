@@ -1,8 +1,8 @@
 import MockAdapter from "axios-mock-adapter";
-import { mockAuth } from "../mocks/auth";
-
+import { mockLogin } from "../mocks/login";
+//mock axios setup which will returns error message for demo purposes
 export default function mockAxios(axios) {
   const mock = new MockAdapter(axios, { delayResponse: 300 });
-  mockAuth(mock);
+  mockLogin(mock);
   return mock;
 }

@@ -1,3 +1,8 @@
+/**
+ * @param {object} store
+ * @param {object} axios function
+ * setupAxios: connects newtwork level data with our redux store
+ */
 import { errorActions } from "../store/error/actions";
 export default function setupAxios(axios, store) {
   axios.interceptors.response.use(
