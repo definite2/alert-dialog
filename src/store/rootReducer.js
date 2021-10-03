@@ -1,3 +1,4 @@
+//src/store/rootReducer.js
 import { configureStore } from "@reduxjs/toolkit";
 import { combineReducers } from "redux";
 import { errorSlice } from "./error/slice";

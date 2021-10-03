@@ -1,3 +1,4 @@
+//src/components/ErrorPortal.js
 import React from "react";
 import { Header, Segment, TransitionablePortal } from "semantic-ui-react"; //any UI library or you can create your own popup component
 import { useSelector, useDispatch } from "react-redux";

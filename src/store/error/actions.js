@@ -1,3 +1,4 @@
+//src/store/error/actions.js
 import { errorSlice } from "./slice";
 export const errorActions = errorSlice.actions;
 export const returnErrors = (message, title) => (dispatch) => {

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Login from "./components/Login";
-import { ErrorPortal } from "./components/Alert";
+import { ErrorPortal } from "./components/ErrorPortal";
 import { useDispatch } from "react-redux";
 import { removeErrors } from "./store/error/actions";
 function App() {
