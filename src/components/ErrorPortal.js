@@ -3,12 +3,12 @@ import React from "react";
 import { Header, Segment, TransitionablePortal } from "semantic-ui-react"; //any UI library or you can create your own popup component
 import { useSelector, useDispatch } from "react-redux";
 import PropTypes from "prop-types";
-import { removeErrors } from "../store/error/actions";
+import { removeError } from "../store/error/actions";
 export const ErrorPortal = () => {
   const dispatch = useDispatch();
   const { openDialog, title, message } = useSelector((state) => state.error);
   const handleClose = () => {
-    dispatch(removeErrors());
+    dispatch(removeError());
   };
 
   return (
