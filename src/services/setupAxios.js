@@ -13,7 +13,7 @@ export default function setupAxios(axios, store) {
       // const status=err.status;
       const message = err.response.data.message || err.statusText;
       store.dispatch(
-        errorActions.showError({ title: "Error", message: message })
+        errorActions.showError({ title: "Invalid Username!", message: message })
       );
       return Promise.reject(err);
     }

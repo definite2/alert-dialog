@@ -1,10 +1,11 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import {
   Button,
   Form,
-  Grid,
+  Container,
   Header,
   Segment,
+  Grid,
 } from "semantic-ui-react";
 import { login } from "../services/authApi";
 
@@ -33,13 +34,22 @@ const Login = () => {
     }, 1000);
   };
   return (
-    <Grid textAlign="center" style={{ height: "100vh" }} verticalAlign="middle">
-      <Grid.Column style={{ maxWidth: 450 }}>
-        <Header as="h2" color="teal" textAlign="center">
-          Log-in to your account
-        </Header>
-        <Form size="large">
-          <Segment stacked>
+    <div
+      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+    >
+      <Header
+        as="h1"
+        content="Error Portal Demo With Login Error Response"
+        style={{ marginTop: "5em" }}
+        textAlign="center"
+      />
+
+      <Grid.Column style={{ maxWidth: 450, marginTop: 120 }}>
+        <Segment>
+          <Header as="h2" color="teal" textAlign="center">
+            Login to see 'User not found' error message
+          </Header>
+          <Form size="large">
             <Form.Input
               id="username"
               fluid
@@ -61,11 +71,10 @@ const Login = () => {
             <Button color="teal" fluid size="large" onClick={onSubmit}>
               Login
             </Button>
-          </Segment>
-        </Form>
-
+          </Form>
+        </Segment>
       </Grid.Column>
-    </Grid>
+    </div>
   );
 };
 

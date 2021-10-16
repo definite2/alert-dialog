@@ -1,3 +1,4 @@
+//src/services/mockAxios.js
 import MockAdapter from "axios-mock-adapter";
 import { mockLogin } from "../mocks/login";
 //mock axios setup which will returns error message for demo purposes
