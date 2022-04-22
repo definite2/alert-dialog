@@ -2,7 +2,7 @@
 
 ## Demo
 
-see [demo](https://61589af219ab3e8546fde742--axios-intercept-error.netlify.app/)
+see [demo](https://majestic-scone-07f7ea.netlify.app/)
 
 ## Blog
 
