@@ -1,18 +1,18 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import {
   Button,
   Form,
-  Container,
+  Message,
   Header,
   Segment,
   Grid,
-} from "semantic-ui-react";
-import { login } from "../services/authApi";
+} from 'semantic-ui-react';
+import { login } from '../services/authApi';
 
 const Login = () => {
   const initialFValues = {
-    username: "",
-    password: "",
+    username: '',
+    password: '',
   };
   const [values, setValues] = useState(initialFValues);
   const handleInputChange = (e) => {
@@ -35,19 +35,22 @@ const Login = () => {
   };
   return (
     <div
-      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+      style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
     >
-      <Header
-        as="h1"
-        content="Error Portal Demo With Login Error Response"
-        style={{ marginTop: "5em" }}
-        textAlign="center"
+      <Message
+        info
+        color="teal"
+        header="Error Portal Demo With Login Error Response"
+        content=" Try login with any credentantials to see mock 'Invalid Username'
+        error message"
+        size="massive"
+        style={{ marginTop: '5em' }}
       />
 
-      <Grid.Column style={{ maxWidth: 450, marginTop: 120 }}>
+      <Grid.Column style={{ maxWidth: 450, marginTop: 32 }}>
         <Segment>
           <Header as="h2" color="teal" textAlign="center">
-            Login to see 'User not found' error message
+            Login to your account
           </Header>
           <Form size="large">
             <Form.Input
